@@ -191,6 +191,7 @@ h6 {
 }
 .symptoms-content img {
   max-width: 160px;
+  height: 200px;
 }
 .symptoms-content p {
   color: var(--primary-color);
