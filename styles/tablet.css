@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+  /* NAVBAR */
+  .nav-bar {
+    padding: 0 8px;
+  }
+  .navbar-brand {
+    height: 60px;
+  }
+  .navbar-brand img {
+    height: 100%;
+  }
+  .navbar-expand-sm .navbar-nav .nav-link {
+    padding: 18px 0;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .nav-item {
+    margin: 0 4px;
+  }
+  .language-toogle .global-icon {
+    height: 26px;
+  }
+  .language-toogle .flag {
+    width: 18px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+  }
+  /* BANNER */
+  .banner {
+    margin-top: 60px;
+    height: 480px;
+  }
+  .banner-content {
+    height: 480px;
+  }
+  .virus-icon-112,
+  .virus-icon-40-2,
+  .virus-icon-20,
+  .virus-icon-24,
+  .virus-icon-44 {
+    display: none;
+  }
+  .virus-icon-85 {
+    top: 380px;
+  }
+  .banner-content {
+    width: 420px;
+  }
+  /* STATISTICAL */
+  .static-content h4 {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+  /* WHAT IS COVID */
+  .what-is-covid {
+    height: 74%;
+  }
+  .what-is-covid-content {
+    padding: 16px 0 0 0;
+  }
+  .what-is-covid h1 {
+    font-size: 36px;
+  }
+}

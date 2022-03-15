@@ -1,0 +1,35 @@
+@media screen and (max-width: 425px) {
+  /* BANNER */
+  .virus-icon-85 {
+    display: none;
+  }
+  /* STATISTICAL */
+  .statistical {
+    height: 500px;
+  }
+  .col-content {
+    border-right: none !important;
+    border-bottom: 1px solid var(--fourth-color);
+    margin: 0 60px;
+  }
+
+  /* WHAT IS COVID */
+
+  .what-is-covid {
+    background-image: none;
+    position: relative;
+    height: 900px;
+  }
+  .desktop {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+  }
+  .mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}

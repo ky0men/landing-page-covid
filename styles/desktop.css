@@ -1,0 +1,895 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"); */
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Black.ttf");
+  font-weight: 900;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  /* scroll-behavior: smooth; */
+}
+body {
+  /* line-height: 1.5; */
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Lato", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --primary-color: #22577a;
+  --secondary-color: #38a3a5;
+  --third-color: #57cc99;
+  --fourth-color: #80ed99;
+}
+.container {
+  max-width: 1024px;
+}
+.anchor {
+  display: block;
+  height: 60px;
+  margin-top: -60px;
+  visibility: hidden;
+}
+/* Language */
+.english {
+  display: none;
+}
+.active {
+  display: block;
+}
+/* NAVBAR */
+.navbar {
+  padding: 0;
+  box-shadow: rgba(26, 26, 26, 0.7) 0 0 4px;
+}
+.navbar-brand {
+  height: 90px;
+  padding: 4px 0;
+}
+.navbar-brand img {
+  /* height: 90px; */
+  height: 100%;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0;
+}
+.nav-link:hover {
+  color: var(--primary-color);
+}
+.nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+.navbar-expand-sm .navbar-nav .nav-link {
+  padding: 32px 0;
+}
+.nav-item {
+  margin: 0 8px;
+}
+
+.language-toogle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-end;
+}
+.language-toogle .global-icon {
+  height: 36px;
+  cursor: pointer;
+}
+.language-toogle .flag {
+  width: 24px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+/* BANNER */
+.banner {
+  margin-top: 90px;
+  height: 590px;
+  background-image: url(../images/banner-background/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.banner-content {
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+.banner-content h2 {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+.banner-content h1 {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--fourth-color);
+  margin-bottom: 12px;
+}
+.banner-content p {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+}
+.let-us-help-btn {
+  padding: 12px 28px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 18px;
+}
+.virus-icon-112 {
+  position: absolute;
+  top: 100px;
+  left: 180px;
+  animation: virusMoving1 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-46 {
+  position: absolute;
+  top: 80px;
+  left: 90px;
+  animation: virusMoving3 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-34 {
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  animation: virusMoving8 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-58 {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+  animation: virusMoving4 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-40 {
+  position: absolute;
+  top: 530px;
+  left: 40px;
+  animation: virusMoving5 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-40-2 {
+  position: absolute;
+  top: 500px;
+  left: 350px;
+  animation: virusMoving8 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-85 {
+  position: absolute;
+  width: 85px;
+  top: 430px;
+  left: 200px;
+  animation: virusMoving2 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-24 {
+  position: absolute;
+  top: 350px;
+  left: 550px;
+  animation: virusMoving6 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.virus-icon-44 {
+  position: absolute;
+  top: 430px;
+  left: 550px;
+  animation: virusMoving7 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: none;
+}
+.virus-icon-20 {
+  position: absolute;
+  top: 560px;
+  left: 450px;
+  animation: virusMoving6 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+/* Virus moving animation */
+@keyframes virusMoving1 {
+  0% {
+    top: 100px;
+    left: 180px;
+    transform: rotateZ(0deg);
+  }
+  25% {
+    top: 70px;
+    left: 220px;
+    transform: rotateZ(120deg);
+  }
+  50% {
+    top: 60px;
+    left: 300px;
+    transform: rotateZ(240deg);
+  }
+  75% {
+    top: 10px;
+    left: 180px;
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes virusMoving2 {
+  0% {
+    width: 85px;
+    transform: rotateZ(0deg);
+  }
+  50% {
+    width: 115px;
+    transform: rotateZ(180deg);
+  }
+  100% {
+    width: 85px;
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes virusMoving3 {
+  0% {
+    top: 80px;
+    left: 90px;
+    opacity: 0;
+  }
+  100% {
+    top: -40px;
+    left: 200px;
+    opacity: 1;
+  }
+}
+@keyframes virusMoving4 {
+  0% {
+    top: 500px;
+    left: -20px;
+    opacity: 0;
+  }
+  50% {
+    top: 400px;
+    left: 30px;
+    opacity: 1;
+  }
+  100% {
+    top: 300px;
+    left: 110px;
+    opacity: 0;
+  }
+}
+@keyframes virusMoving5 {
+  0% {
+    top: 650px;
+    left: 80px;
+    opacity: 0;
+  }
+  50% {
+    top: 500px;
+    left: 80px;
+    opacity: 1;
+  }
+  100% {
+    top: 650px;
+    left: 110px;
+    opacity: 0;
+  }
+}
+@keyframes virusMoving6 {
+  0% {
+    width: 24px;
+    transform: rotateZ(0deg);
+  }
+  50% {
+    width: 36px;
+    transform: rotateZ(180deg);
+  }
+  100% {
+    width: 24px;
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes virusMoving7 {
+  0% {
+    top: 600px;
+    left: 250px;
+    opacity: 0;
+  }
+  50% {
+    top: 430px;
+    left: 550px;
+    opacity: 1;
+  }
+  100% {
+    top: 600px;
+    left: 550px;
+    opacity: 0;
+  }
+}
+@keyframes virusMoving8 {
+  0% {
+    width: 34px;
+    transform: rotateZ(0deg);
+  }
+  50% {
+    width: 48px;
+    transform: rotateZ(180deg);
+  }
+  100% {
+    width: 34px;
+    transform: rotateZ(360deg);
+  }
+}
+/* STATISTICAL */
+.virus-icon {
+  height: 40px;
+  margin-right: 8px;
+}
+.content-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.statistical {
+  /* margin-top: 56px; */
+  overflow: hidden;
+  position: relative;
+  height: 220px;
+  width: 100%;
+}
+.static-content {
+  background-color: white;
+  padding: 0;
+  border-radius: 12px;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  color: var(--fourth-color);
+}
+.static-content h4 {
+  font-size: 24px;
+  padding: 12px 0;
+}
+.static-content p {
+  font-size: 24px;
+}
+.static-content .col-content {
+  border-right: 1px solid var(--fourth-color);
+}
+.static-content .last-content {
+  border: none;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/banner-background/statistical-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+}
+.col-content p {
+  font-weight: 900;
+}
+/* WHAT IS COVID */
+.what-is-covid {
+  color: var(--primary-color);
+  background-image: url(../images/banner-background/what-is-covid-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.what-is-covid h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+.what-is-covid p {
+  text-align: justify;
+}
+.what-is-covid-content {
+  padding: 80px 0;
+}
+.mobile {
+  display: none;
+}
+/* SYMPTOMS OF COVID */
+
+.symptoms-of-covid {
+  margin-top: 56px;
+  margin-bottom: 100px;
+}
+.symptoms-of-covid h2 {
+  font-size: 36px;
+  font-weight: 900;
+}
+.symptoms-of-covid .top-content {
+  font-size: 18px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+.text-bold {
+  font-weight: 700;
+}
+.symptoms-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.symptoms-content img {
+  max-width: 160px;
+  height: 200px;
+}
+.symptoms-content p {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+/* TREATMENT */
+.treatment {
+  background-image: url(../images/banner-background/treatment-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 56px;
+  padding-bottom: 68px;
+}
+.treatment h2 {
+  color: var(--fourth-color);
+  font-size: 36px;
+  font-weight: 900;
+}
+.treatment-content {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.treatment-content img {
+  width: 142px;
+}
+.treatment-content p {
+  color: var(--fourth-color);
+  margin-left: 16px;
+  text-align: justify;
+}
+
+/* CALL ACTION */
+
+#call-btn {
+  bottom: 58px;
+  right: -36px;
+  position: fixed;
+}
+.img-circle {
+  background-color: var(--third-color);
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+.circlephone {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  border: 2px solid var(--third-color);
+  width: 100px;
+  height: 100px;
+  bottom: 0px;
+  right: 30px;
+  position: absolute;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  opacity: 0.5;
+  -webkit-animation: circle-anim 2.4s infinite ease-in-out !important;
+  -moz-animation: circle-anim 2.4s infinite ease-in-out !important;
+  -ms-animation: circle-anim 2.4s infinite ease-in-out !important;
+  -o-animation: circle-anim 2.4s infinite ease-in-out !important;
+  animation: circle-anim 2.4s infinite ease-in-out !important;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.circle-fill {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  background-color: var(--third-color);
+  width: 70px;
+  height: 70px;
+  bottom: 15px;
+  right: 45px;
+  position: absolute;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  -webkit-animation: circle-fill-anim 2.3s infinite ease-in-out;
+  -moz-animation: circle-fill-anim 2.3s infinite ease-in-out;
+  -ms-animation: circle-fill-anim 2.3s infinite ease-in-out;
+  -o-animation: circle-fill-anim 2.3s infinite ease-in-out;
+  animation: circle-fill-anim 2.3s infinite ease-in-out;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.img-circle {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  bottom: 25px;
+  right: 55px;
+  position: absolute;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid transparent;
+  opacity: 1;
+}
+.img-circleblock {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-image: url(../images/icon/telephone-call.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+.img-circle:hover {
+  opacity: 1;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.95);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+    opacity: 1;
+  }
+}
+@keyframes tossing {
+  0% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+@-webkit-keyframes tossing {
+  0% {
+    -webkit-transform: rotate(-8deg);
+  }
+  50% {
+    -webkit-transform: rotate(8deg);
+  }
+  100% {
+    -webkit-transform: rotate(-8deg);
+  }
+}
+@-moz-keyframes circle-anim {
+  0% {
+    -moz-transform: rotate(0deg) scale(0.5) skew(1deg);
+    opacity: 0.1;
+    -moz-opacity: 0.1;
+    -webkit-opacity: 0.1;
+    -o-opacity: 0.1;
+  }
+  30% {
+    -moz-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -webkit-opacity: 0.5;
+    -o-opacity: 0.5;
+  }
+  100% {
+    -moz-transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    -webkit-opacity: 0.1;
+    -o-opacity: 0.1;
+  }
+}
+@-webkit-keyframes circle-anim {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.5) skew(1deg);
+    -webkit-opacity: 0.1;
+  }
+  30% {
+    -webkit-transform: rotate(0deg) scale(0.7) skew(1deg);
+    -webkit-opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: rotate(0deg) scale(1) skew(1deg);
+    -webkit-opacity: 0.1;
+  }
+}
+@-o-keyframes circle-anim {
+  0% {
+    -o-transform: rotate(0deg) kscale(0.5) skew(1deg);
+    -o-opacity: 0.1;
+  }
+  30% {
+    -o-transform: rotate(0deg) scale(0.7) skew(1deg);
+    -o-opacity: 0.5;
+  }
+  100% {
+    -o-transform: rotate(0deg) scale(1) skew(1deg);
+    -o-opacity: 0.1;
+  }
+}
+@keyframes circle-anim {
+  0% {
+    transform: rotate(0deg) scale(0.5) skew(1deg);
+    opacity: 0.1;
+  }
+  30% {
+    transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: 0.1;
+  }
+}
+@-moz-keyframes circle-fill-anim {
+  0% {
+    -moz-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+  50% {
+    -moz-transform: rotate(0deg) -moz-scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+  100% {
+    -moz-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes circle-fill-anim {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+  100% {
+    -webkit-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+@-o-keyframes circle-fill-anim {
+  0% {
+    -o-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+  50% {
+    -o-transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+  100% {
+    -o-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+@keyframes circle-fill-anim {
+  0% {
+    transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: 0.2;
+  }
+}
+.zalo-chat-widget {
+  animation: zaloAnimate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  right: 16px !important;
+  bottom: 10px !important;
+}
+@keyframes zaloAnimate {
+  0% {
+    transform: scale(1.1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation nav-mobile Button */
+.navbar-toggler {
+  border-color: transparent;
+  outline: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background: none;
+  position: relative;
+}
+.navbar-toggler-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navbar-toggler-icon span::after,
+.navbar-toggler-icon span::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+}
+.navbar-toggler-icon span::after {
+  top: 8px;
+  left: 0;
+}
+.navbar-toggler-icon span::before {
+  top: -8px;
+  left: 0;
+}
+.navbar-toggler-icon.rotate span {
+  background-color: transparent;
+}
+.navbar-toggler-icon.rotate span::before,
+.navbar-toggler-icon.rotate span::after {
+  top: 0;
+  left: 0;
+}
+.navbar-toggler-icon.rotate span::before {
+  animation: rotate-ham1 0.5s linear forwards;
+}
+.navbar-toggler-icon.rotate span::after {
+  animation: rotate-ham2 0.5s linear forwards;
+}
+@keyframes rotate-ham1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(315deg);
+  }
+}
+@keyframes rotate-ham2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-135deg);
+  }
+}

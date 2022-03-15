@@ -25,9 +25,15 @@ if (ua.indexOf("safari") != -1) {
     });
   }
 }
+// Animated toggle navbar
+var hamburgerBTN = document.querySelector(".navbar-toggler-icon");
+
+hamburgerBTN.addEventListener("click", function () {
+  hamburgerBTN.classList.toggle("rotate");
+});
 
 //Language toogle event
-const languageBtn = document.querySelector(".language-toogle");
+const languageBtn = document.querySelector(".global-icon");
 languageBtn.addEventListener("click", changeLanguage);
 
 const vietnamese = document.querySelectorAll(".vietnamese");

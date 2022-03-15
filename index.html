@@ -18,12 +18,14 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-sm bg-light fixed-top">
-    <div class="container p-0">
+    <div class="container nav-container">
       <a class="navbar-brand" href="#">
         <img class="" src="./images/logo/logo.png" alt="Anti Covid Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon">
+          <span></span>
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
@@ -57,7 +59,6 @@
               <img class="flag vietnamese active" src="./images/icon/vietnam.png" alt="">
               <img class="flag english" src="./images/icon/united-kingdom.png" alt="">
             </div>
-            <!-- <img class="language-toogle" src="./images/vietnamese.png" alt="Language"> -->
           </li>
         </ul>
       </div>
@@ -130,7 +131,7 @@
   <!-- WHAT IS COVID-19 -->
   <span class="anchor" id="what-is-covid"></span>
   <section class="what-is-covid">
-    <div class="container">
+    <div class="container desktop">
       <div class="what-is-covid-content text-center">
         <h1><span class="vietnamese">COVID LÀ GÌ?</span><span class="english">WHAT IS COVID?</span>
         </h1>
@@ -145,6 +146,45 @@
         <p><span class="vietnamese">Có 5 biến thể COVID-19 được ghi nhận trên thế giới là: Alpha, Beta, Gamma, Delta và
             Omicron</span><span class="english">There are 5 types of COVID-19 recorded in the world: Alpha, Beta, Gamma,
             Delta and Omicron</span></p>
+      </div>
+    </div>
+    <div class="mobile">
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <!-- <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div> -->
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/mobile/what-is-covid-bg/bg-1.png" alt="Alpha" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/mobile/what-is-covid-bg/bg-2.png" alt="Beta" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/mobile/what-is-covid-bg/bg-3.png" alt="Gamma" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/mobile/what-is-covid-bg/bg-4.png" alt="Delta" class="d-block" style="width:100%">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/mobile/what-is-covid-bg/bg-5.png" alt="Omicron" class="d-block" style="width:100%">
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button> -->
       </div>
     </div>
   </section>
@@ -216,20 +256,20 @@
   <!-- TREATMENT -->
   <span class="anchor" id="treatment"></span>
   <section class="treatment">
-    <h2 class="mb-4 d-flex align-items-center justify-content-center">
+    <h2 class="mb-4 d-flex align-items-center justify-content-center text-center">
       <span class="vietnamese">CÁCH ĐIỀU TRỊ COVID TẠI NHÀ</span>
       <span class="english">TREATMENT COVID AT HOME</span>
     </h2>
     <div class="container">
-      <div class="row mb-4">
-        <div class="col-md-6 treatment-content">
+      <div class="row">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-01.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Hãy ở nhà</span> trừ trường hợp cần được chăm sóc y
               tế.</span>
             <span class="english"><span class="text-bold">Stay home</span> except to get medical care.</span>
           </p>
         </div>
-        <div class="col-md-6 treatment-content">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-02.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Theo dõi các triệu chứng của bạn</span> một cách cẩn thận.
               Nếu các triệu chứng của bạn chuyển biến nặng hơn, hãy gọi cho trung tâm y tế ngay lập tức.</span>
@@ -238,14 +278,14 @@
           </p>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col-md-6 treatment-content">
+      <div class="row">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-03.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Nghỉ ngơi và uống đủ nước.</span></span>
             <span class="english"><span class="text-bold">Get rest and stay hydrated.</span></span>
           </p>
         </div>
-        <div class="col-md-6 treatment-content">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-04.png" alt="Treatment 01">
           <p><span class="vietnamese">Nếu bạn có một cuộc hẹn y tế,<span class="text-bold"> hãy gọi cho nhà cung cấp
                 dịch vụ chăm sóc sức khỏe trước</span> và cho họ biết rằng bạn có hoặc có thể bị COVID-19.</span>
@@ -254,8 +294,8 @@
           </p>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col-md-6 treatment-content">
+      <div class="row">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-05.png" alt="Treatment 01">
           <p><span class="vietnamese">Đối với các trường hợp khẩn cấp về y tế, hãy gọi 115 và <span
                 class="text-bold">thông báo cho nhân viên y tế </span>rằng bạn đang mắc hoặc có thể mắc
@@ -264,7 +304,7 @@
                 personnel </span>that you have or may have COVID-19.</span>
           </p>
         </div>
-        <div class="col-md-6 treatment-content">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-06.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Che miệng khi ho và hắt hơi </span> bằng khăn giấy hoặc
               dùng mặt trong của khuỷu tay.</span>
@@ -273,8 +313,8 @@
           </p>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col-md-6 treatment-content">
+      <div class="row">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-07.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Thường xuyên rửa tay </span>bằng xà phòng và nước trong ít
               nhất 20 giây hoặc rửa tay sạch bằng chất khử trùng tay chứa cồn có chứa ít nhất 60% cồn.</span>
@@ -283,7 +323,7 @@
               alcohol.</span>
           </p>
         </div>
-        <div class="col-md-6 treatment-content">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-08.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Hãy ở phòng riêng và tránh xa những người khác trong nhà
               </span> của bạn càng xa càng tốt. Ngoài ra, bạn nên sử dụng phòng tắm riêng, nếu có. Nếu bạn cần tiếp xúc
@@ -295,8 +335,8 @@
           </p>
         </div>
       </div>
-      <div class="row mb-4">
-        <div class="col-md-6 treatment-content">
+      <div class="row">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-09.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Tránh dùng chung đồ dùng cá nhân </span>với những người
               khác trong gia đình bạn, như bát đĩa, khăn tắm và bộ đồ giường.</span>
@@ -304,7 +344,7 @@
               household, like dishes, towels, and bedding.</span>
           </p>
         </div>
-        <div class="col-md-6 treatment-content">
+        <div class="col-md-6 treatment-content mb-4">
           <img src="./images/treatment/treatment-10.png" alt="Treatment 01">
           <p><span class="vietnamese"><span class="text-bold">Làm sạch tất cả các bề mặt </span> thường xuyên tiếp xúc,
               như mặt quầy, mặt bàn và tay nắm cửa. Sử dụng bình xịt hoặc vải lau để lau chùi.</span>
