@@ -63,4 +63,8 @@
   .what-is-covid h1 {
     font-size: 36px;
   }
+  /* SYMPTOMS */
+  .symptoms-des {
+    padding: 0 70px;
+  }
 }
