@@ -32,6 +32,21 @@ hamburgerBTN.addEventListener("click", function () {
   hamburgerBTN.classList.toggle("rotate");
 });
 
+const navContainer = document.querySelector(".nav-container");
+const navCollapse = document.querySelector(".navbar-collapse");
+navContainer.addEventListener(
+  "blur",
+  () => {
+    let toggle = document.querySelector(".navbar-toggler");
+    if (!toggle.classList.contains("collapsed")) {
+      toggle.classList.remove("colappsed");
+      navCollapse.classList.remove("show");
+      hamburgerBTN.classList.toggle("rotate");
+    }
+  },
+  true
+);
+
 //Language toogle event
 const languageBtn = document.querySelector(".global-icon");
 languageBtn.addEventListener("click", changeLanguage);
