@@ -998,17 +998,13 @@ textarea {
 }
 
 /* Facebook message */
-/* This is for the circle position */
-.fb_dialog.fb_dialog_advanced {
-  left: 0;
+iframe.fb_customer_chat_bounce_in_v2,
+iframe.fb_customer_chat_bounce_out_v2 {
+  left: 10px !important;
 }
 
-/* The following are for the chat box, on display and on hide */
-iframe.fb_customer_chat_bounce_in_v2 {
-  left: 9pt;
-}
-iframe.fb_customer_chat_bounce_out_v2 {
-  left: 9pt;
+.fb_dialog.fb_dialog_advanced {
+  left: calc(10px * 2) !important;
 }
 @keyframes fb_bounce_in_v2 {
   0% {
