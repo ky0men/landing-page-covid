@@ -531,8 +531,8 @@ h6 {
 /* CALL ACTION */
 
 #call-btn {
-  bottom: 58px;
-  right: -36px;
+  bottom: -10px;
+  right: -28px;
   position: fixed;
 }
 .img-circle {
@@ -998,38 +998,3 @@ textarea {
 }
 
 /* Facebook message */
-.fb_dialog {
-  left: 18pt;
-}
-@keyframes fb_bounce_in_v2 {
-  0% {
-    opacity: 0;
-    transform: scale(0, 0);
-    transform-origin: bottom left;
-  }
-
-  50% {
-    transform: scale(1.03, 1.03);
-    transform-origin: bottom left;
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-    transform-origin: bottom left;
-  }
-}
-
-@keyframes fb_bounce_out_v2 {
-  0% {
-    opacity: 1;
-    transform: scale(1, 1);
-    transform-origin: bottom left;
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(0, 0);
-    transform-origin: bottom left;
-  }
-}
