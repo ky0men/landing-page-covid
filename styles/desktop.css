@@ -998,10 +998,8 @@ textarea {
 }
 
 /* Facebook message */
-.fb-customerchat {
-  position: absolute;
-  left: 0 !important;
-  bottom: 0;
+.fb_dialog {
+  left: 18pt;
 }
 @keyframes fb_bounce_in_v2 {
   0% {
