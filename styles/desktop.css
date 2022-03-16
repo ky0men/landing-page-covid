@@ -1000,7 +1000,7 @@ textarea {
 /* Facebook message */
 /* This is for the circle position */
 .fb_dialog.fb_dialog_advanced {
-  left: 18pt;
+  left: 0;
 }
 
 /* The following are for the chat box, on display and on hide */
