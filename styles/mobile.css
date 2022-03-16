@@ -32,4 +32,9 @@
     left: 0;
     right: 0;
   }
+
+  /* CONTACT FORM */
+  .remove-mb {
+    margin-bottom: 0 !important;
+  }
 }

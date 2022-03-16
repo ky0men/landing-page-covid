@@ -356,6 +356,68 @@
       </div>
     </div>
   </section>
+  <!-- FORM -->
+  <section class="contact-form">
+    <div class="container">
+      <div class="row px-3">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 form-container">
+          <h2 class="text-center"><span class="vietnamese">Bạn có câu hỏi? <br>Để chúng tôi giúp bạn.</span>
+            <span class="english">Have questions in mind? <br>Let us help you.</span>
+          </h2>
+          <form id="contact-form" class="">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3 mt-3 uname-container remove-mb">
+                  <input type="text" class="form-control" id="uname" placeholder="Họ tên" name="uname">
+                  <div class="validate-mark">
+                    <img class="valid-mark-uname" src="./images/icon/check-mark.png" alt="Valid mark">
+                    <img class="invalid-mark-uname" src="./images/icon/close.png" alt="Invalid mark">
+                  </div>
+                  <p class="uname-mess">Mess</p>
+                  <!-- <div class="valid-feedback">Valid.</div>
+                  <div class="invalid-feedback">Please fill out this field.</div> -->
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3 mt-3 uname-container">
+                  <input class="form-control" id="email" type="email" name="email" placeholder="E-mail">
+                  <div class="validate-mark">
+                    <img class="valid-mark-email" src="./images/icon/check-mark.png" alt="Valid mark">
+                    <img class="invalid-mark-email" src="./images/icon/close.png" alt="Invalid mark">
+                  </div>
+                  <p class="email-mess">Mess</p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 uname-container">
+              <input type="text" class="form-control" id="phone" placeholder="Số điện thoại" name="phone">
+              <div class="validate-mark">
+                <img class="valid-mark-phone" src="./images/icon/check-mark.png" alt="Valid mark">
+                <img class="invalid-mark-phone" src="./images/icon/close.png" alt="Invalid mark">
+              </div>
+              <p class="phone-mess">Mess</p>
+              <!-- <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div> -->
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" id="comment" name="comment" placeholder="Nội dung"></textarea>
+            </div>
+            <button type="submit" class="submit-btn"><span class="vietnamese">Gửi</span>
+              <span class="english">Send</span></button>
+            <div class="alert alert-success alert-dismissible fade alert-mess d-flex">
+              <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
+              <strong><span class="vietnamese">Gửi thành công! </span>
+                <span class="english">Success!</span></strong><span class="vietnamese">Chúng tôi sẽ liên lạc cho bạn
+                ngay.</span>
+              <span class="english"> We will contact you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
   <!-- REAL_STORY -->
   <section class="real-story">
 
@@ -405,10 +467,40 @@
   </div>
 
   <!-- ZALO WIDGET -->
-  <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
+  <!-- Messenger Plugin chat Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Plugin chat code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "109005808413614");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v13.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
     data-autopopup="0" data-width="30" data-height="300"></div>
 
-  <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+  <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>

@@ -36,19 +36,28 @@ hamburgerBTN.addEventListener("click", function () {
 const languageBtn = document.querySelector(".global-icon");
 languageBtn.addEventListener("click", changeLanguage);
 
-const vietnamese = document.querySelectorAll(".vietnamese");
-const english = document.querySelectorAll(".english");
+const unameInput = document.querySelector("#uname");
+const phoneInput = document.querySelector("#phone");
+const commentInput = document.querySelector("#comment");
 
 function changeLanguage(e) {
+  const vietnamese = document.querySelectorAll(".vietnamese");
+  const english = document.querySelectorAll(".english");
   // console.log(e.target.nextElementSibling.classList.contains("active"));
   if (e.target.nextElementSibling.classList.contains("active")) {
     e.target.nextElementSibling.classList.remove("active");
     e.target.nextElementSibling.nextElementSibling.classList.add("active");
     vietnamese.forEach((element) => {
       element.style.display = "none";
+      unameInput.setAttribute("placeholder", "Họ tên");
+      phoneInput.setAttribute("placeholder", "Số điện thoại");
+      commentInput.setAttribute("placeholder", "Nội dung");
     });
     english.forEach((element) => {
       element.style.display = "block";
+      unameInput.setAttribute("placeholder", "Name");
+      commentInput.setAttribute("placeholder", "Comment");
+      phoneInput.setAttribute("placeholder", "Phone number");
     });
     document.title = "Fight against Covid-19";
   } else {
@@ -56,9 +65,15 @@ function changeLanguage(e) {
     e.target.nextElementSibling.nextElementSibling.classList.remove("active");
     vietnamese.forEach((element) => {
       element.style.display = "block";
+      unameInput.setAttribute("placeholder", "Name");
+      commentInput.setAttribute("placeholder", "Comment");
+      phoneInput.setAttribute("placeholder", "Phone number");
     });
     english.forEach((element) => {
       element.style.display = "none";
+      unameInput.setAttribute("placeholder", "Họ tên");
+      commentInput.setAttribute("placeholder", "Nội dung");
+      phoneInput.setAttribute("placeholder", "Số điện thoại");
     });
     document.title = "Chống dịch Covid-19";
   }
@@ -120,3 +135,205 @@ const statisticalNav = document.getElementById("statistical-nav");
 statisticalNav.addEventListener("click", function () {
   numberAnimate();
 });
+
+// Validation form
+// Validate name
+const validMarkUname = document.querySelector(".valid-mark-uname");
+const invalidMarkUname = document.querySelector(".invalid-mark-uname");
+const unameMess = document.querySelector(".uname-mess");
+let validUname = 0;
+function validateUname() {
+  if (unameInput.value == "") {
+    validMarkUname.style.display = "none";
+    invalidMarkUname.style.display = "block";
+    unameInput.classList.add("invalid-input");
+    unameInput.classList.remove("valid-input");
+    unameMess.classList.add("invalid-mess");
+    unameMess.innerHTML = `
+    <span class="vietnamese">Hãy nhập tên của bạn.</span>
+    <span class="english">Please input your name.</span>
+    `;
+    unameMess.style.display = "block";
+  } else {
+    validMarkUname.style.display = "block";
+    invalidMarkUname.style.display = "none";
+    unameInput.classList.add("valid-input");
+    unameInput.classList.remove("invalid-input");
+    unameMess.style.display = "none";
+    validUname = 1;
+    return validUname;
+  }
+}
+unameInput.addEventListener("blur", function () {
+  validateUname();
+});
+unameInput.addEventListener("focus", function () {
+  validMarkUname.style.display = "none";
+  invalidMarkUname.style.display = "none";
+});
+
+// Validate email
+const validMarkEmail = document.querySelector(".valid-mark-email");
+const invalidMarkEmail = document.querySelector(".invalid-mark-email");
+const emailInput = document.querySelector("#email");
+const emailMess = document.querySelector(".email-mess");
+
+let validEmail = 0;
+function validateEmail() {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailInput.value == "") {
+    validMarkEmail.style.display = "none";
+    invalidMarkEmail.style.display = "block";
+    emailInput.classList.add("invalid-input");
+    emailInput.classList.remove("valid-input");
+    emailMess.classList.add("invalid-mess");
+    emailMess.innerHTML = `
+    <span class="vietnamese">Hãy nhập email của bạn.</span>
+    <span class="english">Please input your email.</span>
+    `;
+    emailMess.style.display = "block";
+  } else if (!re.test(email.value)) {
+    validMarkEmail.style.display = "none";
+    invalidMarkEmail.style.display = "block";
+    emailInput.classList.add("invalid-input");
+    emailInput.classList.remove("valid-input");
+    emailMess.classList.add("invalid-mess");
+    emailMess.innerHTML = `
+    <span class="vietnamese">Email không hợp lệ.</span>
+    <span class="english">Email is not valid.</span>
+    `;
+    emailMess.style.display = "block";
+  } else {
+    validMarkEmail.style.display = "block";
+    invalidMarkEmail.style.display = "none";
+    emailInput.classList.add("valid-input");
+    emailInput.classList.remove("invalid-input");
+    emailMess.style.display = "none";
+    validEmail = 1;
+    return validEmail;
+  }
+}
+
+emailInput.addEventListener("blur", function () {
+  validateEmail();
+});
+emailInput.addEventListener("focus", function () {
+  validMarkEmail.style.display = "none";
+  invalidMarkEmail.style.display = "none";
+});
+
+// Validate phone number
+const validMarkPhone = document.querySelector(".valid-mark-phone");
+const invalidMarkPhone = document.querySelector(".invalid-mark-phone");
+const phoneMess = document.querySelector(".phone-mess");
+
+let validPhone = 0;
+function validatePhone() {
+  const re = /^[0-9\+]{1}[0-9]{9,11}$/;
+  if (phoneInput.value == "") {
+    validMarkPhone.style.display = "none";
+    invalidMarkPhone.style.display = "block";
+    phoneInput.classList.add("invalid-input");
+    phoneInput.classList.remove("valid-input");
+    phoneMess.classList.add("invalid-mess");
+    phoneMess.innerHTML = `
+    <span class="vietnamese">Hãy nhập số điện thoại của bạn.</span>
+    <span class="english">Please input your phone.</span>
+    `;
+    phoneMess.style.display = "block";
+  } else if (!re.test(phone.value)) {
+    validMarkPhone.style.display = "none";
+    invalidMarkPhone.style.display = "block";
+    phoneInput.classList.add("invalid-input");
+    phoneInput.classList.remove("valid-input");
+    phoneMess.classList.add("invalid-mess");
+    phoneMess.innerHTML = `
+    <span class="vietnamese">Số điện thoại không hợp lệ.</span>
+    <span class="english">Phone is not valid.</span>
+    `;
+    phoneMess.style.display = "block";
+  } else {
+    validMarkPhone.style.display = "block";
+    invalidMarkPhone.style.display = "none";
+    phoneInput.classList.add("valid-input");
+    phoneInput.classList.remove("invalid-input");
+    phoneMess.style.display = "none";
+    validPhone = 1;
+    return validPhone;
+  }
+}
+phoneInput.addEventListener("blur", function () {
+  validatePhone();
+});
+phoneInput.addEventListener("focus", function () {
+  validMarkPhone.style.display = "none";
+  invalidMarkPhone.style.display = "none";
+});
+
+const submitBtn = document.querySelector(".submit-btn");
+const alertMess = document.querySelector(".alert-mess");
+const comment = document.querySelector("#comment");
+
+submitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (
+    unameInput.value == "" &&
+    emailInput.value == "" &&
+    phoneInput.value == ""
+  ) {
+    validateUname();
+    validateEmail();
+    validatePhone();
+  } else if (!validUname) {
+    validateUname();
+  } else if (!validEmail) {
+    validateEmail();
+  } else if (!validPhone) {
+    validatePhone();
+  }
+  if (validEmail && validPhone && validUname) {
+    // console.log("ok");
+    validEmail = 0;
+    validUname = 0;
+    validPhone = 0;
+    unameInput.value = "";
+    emailInput.value = "";
+    phoneInput.value = "";
+    comment.value = "";
+    validMarkUname.style.display = "none";
+    validMarkEmail.style.display = "none";
+    validMarkPhone.style.display = "none";
+    unameInput.classList.remove("valid-input");
+    unameInput.classList.remove("invalid-input");
+    emailInput.classList.remove("valid-input");
+    emailInput.classList.remove("invalid-input");
+    phoneInput.classList.remove("valid-input");
+    phoneInput.classList.remove("invalid-input");
+    alertMess.classList.add("show");
+    setTimeout(function () {
+      alertMess.classList.remove("show");
+    }, 5000);
+  }
+});
+
+//Messenger facebook
+// var chatbox = document.getElementById("fb-customer-chat");
+// chatbox.setAttribute("page_id", "109005808413614");
+// chatbox.setAttribute("attribution", "biz_inbox");
+
+// window.fbAsyncInit = function () {
+//   FB.init({
+//     xfbml: true,
+//     version: "v13.0",
+//   });
+// };
+
+// (function (d, s, id) {
+//   var js,
+//     fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s);
+//   js.id = id;
+//   js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+//   fjs.parentNode.insertBefore(js, fjs);
+// })(document, "script", "facebook-jssdk");
