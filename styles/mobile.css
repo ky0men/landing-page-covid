@@ -37,6 +37,10 @@
   .symptoms-des {
     padding: 0;
   }
+  /* TREATMENT */
+  .treatment .treatment-des {
+    padding: 0 16px;
+  }
 
   /* CONTACT FORM */
   .remove-mb {

@@ -479,7 +479,7 @@ h6 {
 
 .symptoms-of-covid {
   margin-top: 56px;
-  margin-bottom: 100px;
+  margin-bottom: 54px;
 }
 .symptoms-of-covid h2 {
   font-size: 36px;
@@ -501,6 +501,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 36px;
 }
 .symptoms-content img {
   max-width: 160px;
@@ -518,28 +519,45 @@ h6 {
   background-repeat: no-repeat;
   padding-top: 56px;
   padding-bottom: 68px;
+  position: relative;
 }
 .treatment h2 {
   color: var(--fourth-color);
   font-size: 36px;
   font-weight: 900;
 }
-.treatment .treatment-des {
+.treatment-card {
+  padding: 0 20px;
+}
+.treatment-card img {
+  width: 60%;
+}
+.treatment-number {
+  font-size: 72px;
+  color: white;
+}
+.treatment-text {
+  font-size: 18px;
+  color: var(--fourth-color);
+  text-align: justify;
+  padding-left: 24px;
+}
+/* #treatment-carousel {
+  position: relative;
+} */
+.carousel-control {
+  position: absolute;
+  top: -70px;
+  right: 0;
+}
+.carousel-control-btn {
+  background-color: transparent;
+  padding: 0 0 0 4px;
+}
+.treatment-des {
   color: var(--fourth-color);
   padding: 0 400px;
-  margin-bottom: 50px;
-}
-.treatment-content {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-.treatment-content img {
-  width: 142px;
-}
-.treatment-content p {
-  color: var(--fourth-color);
-  margin-left: 16px;
+  margin-bottom: 80px;
   text-align: justify;
 }
 
