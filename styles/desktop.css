@@ -1228,3 +1228,29 @@ textarea {
   font-weight: 900;
   color: var(--primary-color);
 }
+
+/* Footer */
+footer {
+  background-image: url("../images/banner-background/footer-bg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+}
+.footer-link a {
+  text-decoration: none;
+  color: var(--fourth-color);
+  font-weight: 700;
+}
+.footer-link div {
+  margin-bottom: 12px;
+}
+.home-footer a {
+  color: white;
+  border-bottom: 2px solid white;
+}
+.follow-us .link-follow {
+  color: white;
+  font-weight: 700;
+  border-bottom: 2px solid white;
+}
