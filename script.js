@@ -32,20 +32,36 @@ hamburgerBTN.addEventListener("click", function () {
   hamburgerBTN.classList.toggle("rotate");
 });
 
-const navContainer = document.querySelector(".nav-container");
-const navCollapse = document.querySelector(".navbar-collapse");
-navContainer.addEventListener(
-  "blur",
-  () => {
-    let toggle = document.querySelector(".navbar-toggler");
-    if (!toggle.classList.contains("collapsed")) {
-      toggle.classList.remove("colappsed");
-      navCollapse.classList.remove("show");
-      hamburgerBTN.classList.toggle("rotate");
-    }
-  },
-  true
-);
+// const navContainer = document.querySelector(".nav-container");
+// const navCollapse = document.querySelector(".navbar-collapse");
+// navContainer.addEventListener(
+//   "blur",
+//   () => {
+//     let toggle = document.querySelector(".navbar-toggler");
+//     if (!toggle.classList.contains("collapsed")) {
+//       toggle.classList.remove("colappsed");
+//       navCollapse.classList.remove("show");
+//       hamburgerBTN.classList.toggle("rotate");
+//     }
+//   },
+//   true
+// );
+
+//Navbar scroll
+const navBar = document.querySelector(".navbar");
+const navBarBrand = document.querySelector(".navbar-brand");
+window.addEventListener("scroll", function () {
+  // console.log(window.scrollY);
+  if (window.scrollY >= 100) {
+    navBar.classList.add("nav-minimize");
+    navBar.style.height = "60px";
+    navBarBrand.style.height = "60px";
+  } else {
+    navBar.classList.remove("nav-minimize");
+    navBar.style.height = "90px";
+    navBarBrand.style.height = "90px";
+  }
+});
 
 //Language toogle event
 const languageBtn = document.querySelector(".global-icon");
