@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -131,6 +133,7 @@
       </div>
     </div>
   </section>
+  <div id="container-map"></div>
   <!-- WHAT IS COVID-19 -->
   <span class="anchor" id="what-is-covid"></span>
   <section class="what-is-covid">
@@ -645,7 +648,7 @@
           <div><a href="https://aptech-danang.edu.vn/"><img src="./images/logo/banner-sm.jpeg" alt="Logo Aptech"></a>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
           <div class="fb-page mb-3" data-href="https://www.facebook.com/softechaptech" data-tabs="timeline"
             data-width="350" data-height="80" data-small-header="false" data-adapt-container-width="false"
             data-hide-cover="false" data-show-facepile="false">
@@ -661,15 +664,21 @@
           </div>
         </div>
         <div class="col-md-2 footer-link">
-          <div class="home-footer"><a href="#home">TRANG CHỦ</a></div>
-          <div><a href="#home">THỐNG KÊ</a></div>
-          <div><a href="#home">COVID LÀ GÌ</a></div>
-          <div><a href="#home">TRIỆU CHỨNG</a></div>
-          <div><a href="#home">ĐIỀU TRỊ</a></div>
-          <div><a href="#home">CÂU CHUYỆN</a></div>
+          <div class="home-footer"><a href="#home"><span class="vietnamese">TRANG CHỦ</span>
+              <span class="english">HOME</span></a></div>
+          <div><a href="#home"><span class="vietnamese">THỐNG KÊ</span>
+              <span class="english">STATISTICAL</span></a></div>
+          <div><a href="#home"><span class="vietnamese">COVID LÀ GÌ</span>
+              <span class="english">WHAT IS COVID</span></a></div>
+          <div><a href="#home"><span class="vietnamese">TRIỆU CHỨNG</span>
+              <span class="english">SYMPTOMS</span></a></div>
+          <div><a href="#home"><span class="vietnamese">ĐIỀU TRỊ</span>
+              <span class="english">TREATMENT</span></a></div>
+          <div><a href="#home"><span class="vietnamese">CÂU CHUYỆN</span>
+              <span class="english">REAL STORY</span></a></div>
           <div class="follow-us">
             <div><a class="link-follow" href="">FOLLOW US</a></div>
-            <div class="social-icon d-flex justify-content-between">
+            <div class="social-icon d-flex">
               <a href="https://www.facebook.com/Health-Care-Center-109005808413614"><img
                   src="./images/icon/facebook-icon.png" alt="Facebook"></a>
               <a href="https://www.youtube.com/"><img src="./images/icon/youtube-icon.png" alt="Youtube"></a>
@@ -728,9 +737,19 @@
     data-autopopup="0" data-width="30" data-height="300"></div>
 
   <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
+  <!-- Map Lib -->
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+  <script src="https://cdn.anychart.com/geodata/latest/custom/world/world.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="./map.js"></script>
   <script src="./script.js"></script>
 </body>
 
