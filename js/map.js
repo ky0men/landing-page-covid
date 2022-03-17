@@ -19,7 +19,7 @@ anychart.onDocumentReady(function () {
       .useHtml(true)
       .padding([10, 0, 10, 0])
       .text(
-        '<span  style="color:#22577a;">Thống kê dịch COVID-19</span><br/>' +
+        '<span  style="color:#22577a; font-weight: 700;"">Bản đồ thống kê dịch COVID-19</span><br/>' +
           '<span  style="color:#22577a; font-size: 12px;">(Data source: Wikipedia)</span>'
       );
 
@@ -42,13 +42,13 @@ anychart.onDocumentReady(function () {
       .useHtml(true)
       .format(function () {
         return (
-          '<span style="color: #d9d9d9">Total Cases:</span>: ' +
+          '<span style="color: #f9d5bd"><span class="vietnamese">Tổng ca nhiễm</span><span class="english">Total Cases</span></span>: ' +
           parseFloat(this.getData("cases")).toLocaleString() +
           "<br/>" +
-          '<span style="color: #d9d9d9">Deaths:</span>: ' +
+          '<span style="color: #f8297f"><span class="vietnamese">Tử vong</span><span class="english">Deaths</span></span>: ' +
           parseInt(this.getData("deaths")).toLocaleString() +
           "<br/>" +
-          '<span style="color: #d9d9d9">Recovered:</span>: ' +
+          '<span style="color: #f9d5bd"><span class="vietnamese">Đã hồi phục</span><span class="english">Recovered</span></span>: ' +
           parseInt(this.getData("recovered")).toLocaleString()
         );
       });

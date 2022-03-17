@@ -56,10 +56,12 @@ window.addEventListener("scroll", function () {
     navBar.classList.add("nav-minimize");
     navBar.style.height = "60px";
     navBarBrand.style.height = "60px";
+    navBarBrand.style.width = "130px";
   } else {
     navBar.classList.remove("nav-minimize");
     navBar.style.height = "90px";
     navBarBrand.style.height = "90px";
+    navBarBrand.style.width = "200px";
   }
 });
 
@@ -371,6 +373,9 @@ $(function () {
   $(window).on("scroll", function () {
     scrNav();
   });
+  $(document).ready(function () {
+    scrNav();
+  });
 
   // scrNav function
   // Change active dot according to the active section in the window
@@ -378,14 +383,13 @@ $(function () {
     var sTop = $(window).scrollTop();
     $(".anchor").each(function () {
       var id = $(this).attr("id"),
-        offset = $(this).offset().top - 1,
+        offset = $(this).offset().top - 50,
         height = $(this).height();
-      if (sTop >= offset && sTop < offset + height) {
+      if (sTop >= offset) {
         link.removeClass("active");
         $("#sub-nav")
           .find('[data-scroll="' + id + '"]')
           .addClass("active");
-        console.log(id);
       }
     });
   }
