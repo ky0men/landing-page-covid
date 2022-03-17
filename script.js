@@ -347,24 +347,47 @@ submitBtn.addEventListener("click", function (e) {
   }
 });
 
-//Messenger facebook
-// var chatbox = document.getElementById("fb-customer-chat");
-// chatbox.setAttribute("page_id", "109005808413614");
-// chatbox.setAttribute("attribution", "biz_inbox");
+// SUB NAV
+$(function () {
+  var link = $("#sub-nav a.dot");
 
-// window.fbAsyncInit = function () {
-//   FB.init({
-//     xfbml: true,
-//     version: "v13.0",
-//   });
-// };
+  // Move to specific section when click on menu link
+  link.on("click", function (e) {
+    var target = $($(this).attr("href"));
+    $("html, body").animate(
+      {
+        scrollTop: target.offset().top,
+      },
+      600
+    );
+    $(".dot").each(function () {
+      $(this).removeClass("active");
+    });
+    $(this).addClass("active");
+    e.preventDefault();
+  });
 
-// (function (d, s, id) {
-//   var js,
-//     fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById(id)) return;
-//   js = d.createElement(s);
-//   js.id = id;
-//   js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
-//   fjs.parentNode.insertBefore(js, fjs);
-// })(document, "script", "facebook-jssdk");
+  // Run the scrNav when scroll
+  $(window).on("scroll", function () {
+    scrNav();
+  });
+
+  // scrNav function
+  // Change active dot according to the active section in the window
+  function scrNav() {
+    var sTop = $(window).scrollTop();
+    $(".anchor").each(function () {
+      var id = $(this).attr("id"),
+        offset = $(this).offset().top - 1,
+        height = $(this).height();
+      if (sTop >= offset && sTop < offset + height) {
+        link.removeClass("active");
+        $("#sub-nav")
+          .find('[data-scroll="' + id + '"]')
+          .addClass("active");
+        console.log(id);
+      }
+    });
+  }
+  scrNav();
+});
