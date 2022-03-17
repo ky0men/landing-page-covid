@@ -1308,14 +1308,14 @@ footer {
 .sub-nav .nav-menu li .dot::after {
   width: 15px;
   height: 15px;
-  border: 2px solid var(--fourth-color);
+  border: 2px solid var(--third-color);
   left: -5px;
   transform: translateY(-50%) scale(0);
 }
 .sub-nav .nav-menu li .dot.active::before,
 .sub-nav .nav-menu li:hover .dot::before {
-  background: var(--fourth-color);
-  border-color: var(--fourth-color);
+  background: var(--third-color);
+  border-color: var(--third-color);
 }
 .sub-nav .nav-menu li .dot.active::after,
 .sub-nav .nav-menu li:hover .dot::after {
@@ -1327,7 +1327,7 @@ footer {
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: capitalize;
-  background-color: var(--fourth-color);
+  background-color: var(--third-color);
   padding: 10px 20px;
   border-radius: 3px;
   /* margin-right: 30px; */
@@ -1339,7 +1339,7 @@ footer {
   display: block;
   position: absolute;
   content: "";
-  border-right: 7px solid var(--fourth-color);
+  border-right: 7px solid var(--third-color);
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
   top: 50%;
