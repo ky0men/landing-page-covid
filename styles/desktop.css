@@ -221,8 +221,8 @@ h6 {
   margin-bottom: 24px;
 }
 .let-us-help-btn {
-  background: none;
-  border: 2px solid var(--fourth-color);
+  background-color: white;
+  border: 4px solid var(--fourth-color);
   border-radius: 15px;
   font-weight: 900;
   font-size: 18px;
@@ -482,9 +482,7 @@ h6 {
   text-align: justify;
   padding-left: 24px;
 }
-/* #treatment-carousel {
-  position: relative;
-} */
+
 .carousel-control {
   position: absolute;
   top: -70px;
@@ -593,38 +591,6 @@ h6 {
 .img-circle:hover {
   opacity: 1;
 }
-/* 
-.zalo-chat-widget {
-  animation: zaloAnimate;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  right: 16px !important;
-  bottom: 10px !important;
-}
-@keyframes zaloAnimate {
-  0% {
-    transform: scale(1.1);
-  }
-  10% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.1);
-  }
-  30% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
 
 /* Animation nav-mobile Button */
 .navbar-toggler {
