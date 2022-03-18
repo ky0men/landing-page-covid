@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./images/logo/favicon.png" />
   <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -789,7 +790,12 @@
   <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      disable: function () {
+        var maxWidth = 1140;
+        return window.innerWidth < maxWidth;
+      }
+    });
   </script>
   <!-- Map Lib -->
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>

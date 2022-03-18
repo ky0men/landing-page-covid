@@ -146,17 +146,17 @@ function numberAnimate() {
     document.getElementById("new-case-count").innerText = formattedNumber;
   });
 
-  animateNumber(457948427, 2000, 0, function (number) {
+  animateNumber(466472159, 2000, 0, function (number) {
     const formattedNumber = number.toLocaleString();
     document.getElementById("total-case-count").innerText = formattedNumber;
   });
 
-  animateNumber(392046556, 2000, 0, function (number) {
+  animateNumber(397879055, 2000, 0, function (number) {
     const formattedNumber = number.toLocaleString();
     document.getElementById("recovered-case-count").innerText = formattedNumber;
   });
 
-  animateNumber(6044143, 2000, 0, function (number) {
+  animateNumber(6087899, 2000, 0, function (number) {
     const formattedNumber = number.toLocaleString();
     document.getElementById("death-case-count").innerText = formattedNumber;
   });
