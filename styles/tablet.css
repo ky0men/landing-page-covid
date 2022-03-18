@@ -22,13 +22,16 @@
   .side-navigator {
     display: none;
   }
+  .video-story iframe {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 834px) {
   .nav-link {
     font-size: 12px;
   }
   .video-story iframe {
-    width: 780px;
+    width: 100%;
     height: 448px;
   }
   .what-is-covid {

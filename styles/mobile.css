@@ -19,6 +19,15 @@
   .language-toggle {
     margin-top: 20px;
   }
+  /* STATISTICAL */
+  .statistical {
+    height: 500px;
+  }
+  .col-content {
+    border-right: none !important;
+    border-bottom: 1px solid var(--fourth-color);
+    margin: 0 60px;
+  }
   #container-map {
     display: none;
   }
@@ -101,18 +110,21 @@
   .virus-icon-85 {
     display: none;
   }
-  /* STATISTICAL */
-  .statistical {
-    height: 500px;
-  }
-  .col-content {
-    border-right: none !important;
-    border-bottom: 1px solid var(--fourth-color);
-    margin: 0 60px;
-  }
 }
 @media screen and (max-width: 393px) {
   .what-is-covid {
     height: 800px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .what-is-covid {
+    height: 650px;
+  }
+  .avatar {
+    width: 250px;
+  }
+  .team-card {
+    padding-left: 20px;
+    font-size: 18px;
   }
 }
