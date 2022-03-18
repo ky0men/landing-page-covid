@@ -7,6 +7,9 @@
     height: 90px;
     margin-right: 0;
   }
+  .nav-item:last-child {
+    margin-top: 20px;
+  }
   .navbar-collapse {
     background-color: white;
     width: 100vw;
